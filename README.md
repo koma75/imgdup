@@ -17,26 +17,42 @@ Installation
 Usage
 ------------------------------------------------------------------------
 
+All subcommands will find duplicate images using the specified image hash
+function.  Subcommands are used to specify the hash commands as follows:
 
-### Subcmd 1
-
-Subcmd description
+* ahash  
+    * Use Average hash to find duplicates in PATH
+* color  
+    * Use HSV color hash to find duplicates in PATH
+* crop   
+    * Use Crop resistant hash to find similar images in PATH
+* db4       
+    * Use Daubechies wavelet hash to find duplicates in PATH
+* dhash  
+    * Use Difference hash to find duplicates in PATH
+* haar   
+    * Use Haar wavelet hash to find duplicates in PATH
+* phash  
+    * Use Perceptual hash to find duplicates in PATH
 
 ~~~shell
-> imgdup hashfunc --hash-size SIZE -v PATH
+> imgdup HASHFUNC --hash-size SIZE -v PATH
 ~~~
 
-* -o, --option1
-    * description
-* -a, --argopt1 ARG
-    * description
+* PATH
+    * PATH with the images to check for (will not be recursed)
+* -s, --hash-size SIZE
+    * specify the hash size to use. (Default: 8)
 * -v, --verbose
-    * verbosity
+    * specify verbosity.  specify twice to get debug message
+
+If two or more images with the same hash is found, they are put into the 
+same folder with tha hash value as the folder name.
 
 Known Issues
 ------------------------------------------------------------------------
 
-Need to be implemented.
+Not parallelized and is very slow on large data-sets
 
 Development
 ------------------------------------------------------------------------
