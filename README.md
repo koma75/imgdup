@@ -39,6 +39,8 @@ function.  Subcommands are used to specify the hash commands as follows:
 > imgdup HASHFUNC --hash-size SIZE -v PATH
 ~~~
 
+* HASHFUNC
+    * hash function to use in sort images with.  See above for list of functions.
 * PATH
     * PATH with the images to check for (will not be recursed)
 * -s, --hash-size SIZE
