@@ -1,6 +1,8 @@
 imgdup
 ========================================================================
 
+**TOOL CONSOLIDATED TO https://github.com/koma75/imgtk**
+
 Image Duplicate finder using Image Hash.
 
 This is a tool to find similar images in a set of images using imagehash
